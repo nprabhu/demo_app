@@ -1,0 +1,748 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (325.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (199.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120905064911)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120905064911')
+  [1m[36m (199.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-09-05 12:20:20 +0530
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (8ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-09-05 12:20:22 +0530
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Processing by Rails::InfoController#properties as HTML
+  Rendered inline template (5.0ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-09-05 12:20:28 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (188.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (215.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (224.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (206.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120905064911')
+
+
+Started GET "/users/" for 127.0.0.1 at 2012-09-05 12:27:06 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Compiled scaffolds.css  (77ms)  (pid 3987)
+Compiled users.css  (2ms)  (pid 3987)
+Compiled application.css  (102ms)  (pid 3987)
+Compiled jquery.js  (8ms)  (pid 3987)
+Compiled jquery_ujs.js  (0ms)  (pid 3987)
+Compiled users.js  (473ms)  (pid 3987)
+Compiled application.js  (576ms)  (pid 3987)
+Completed 200 OK in 893ms (Views: 811.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:07 +0530
+Served asset /scaffolds.css - 200 OK (23ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:07 +0530
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:07 +0530
+Served asset /jquery_ujs.js - 200 OK (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:07 +0530
+Served asset /users.js - 200 OK (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:07 +0530
+Served asset /users.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:07 +0530
+Served asset /jquery.js - 200 OK (48ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:07 +0530
+Served asset /application.js - 200 OK (16ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-09-05 12:27:09 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (16.5ms)
+  Rendered users/new.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 54ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:10 +0530
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:10 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:10 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:10 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:10 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:10 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:10 +0530
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-09-05 12:27:22 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAfjnJQ613jYIcJWcTQuDQ57CQVpVz8C+NWGAAqnem0=", "user"=>{"name"=>"Prabhu", "email"=>"nprabhu26@gmail.com"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (46.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 05 Sep 2012 06:57:22 UTC +00:00], ["email", "nprabhu26@gmail.com"], ["name", "Prabhu"], ["updated_at", Wed, 05 Sep 2012 06:57:22 UTC +00:00]]
+  [1m[36m (228.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 284ms (ActiveRecord: 274.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-09-05 12:27:23 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:23 +0530
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:23 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:23 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:23 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:23 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:23 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:23 +0530
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-09-05 12:27:24 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:24 +0530
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:24 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:24 +0530
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:24 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:24 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:24 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:24 +0530
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-09-05 12:27:26 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:26 +0530
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:26 +0530
+Served asset /users.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:26 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:26 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:26 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:26 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:26 +0530
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-09-05 12:27:34 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAfjnJQ613jYIcJWcTQuDQ57CQVpVz8C+NWGAAqnem0=", "user"=>{"name"=>"Das", "email"=>"das@gmail.com"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 05 Sep 2012 06:57:34 UTC +00:00], ["email", "das@gmail.com"], ["name", "Das"], ["updated_at", Wed, 05 Sep 2012 06:57:34 UTC +00:00]]
+  [1m[35m (187.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 193ms (ActiveRecord: 188.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2012-09-05 12:27:34 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:34 +0530
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:34 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:34 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:34 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:34 +0530
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:34 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:34 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-09-05 12:27:36 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:36 +0530
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:36 +0530
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:27:36 +0530
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:36 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:36 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:36 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:27:36 +0530
+Served asset /application.js - 304 Not Modified (60ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20120905064911)
+Migrating to CreateMicroposts (20120905065927)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120905065927')[0m
+  [1m[35m (301.1ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("microposts")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/microposts" for 127.0.0.1 at 2012-09-05 12:36:37 +0530
+Processing by MicropostsController#index as HTML
+  [1m[36mMicropost Load (0.2ms)[0m  [1mSELECT "microposts".* FROM "microposts" [0m
+  Rendered microposts/index.html.erb within layouts/application (2.0ms)
+Compiled microposts.css  (2ms)  (pid 3987)
+Compiled application.css  (19ms)  (pid 3987)
+Compiled microposts.js  (226ms)  (pid 3987)
+Compiled application.js  (287ms)  (pid 3987)
+Completed 200 OK in 389ms (Views: 383.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:36:38 +0530
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2012-09-05 12:36:38 +0530
+Served asset /microposts.css - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:36:38 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:36:38 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:36:38 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:36:38 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2012-09-05 12:36:38 +0530
+Served asset /microposts.js - 200 OK (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:36:38 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:36:38 +0530
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at 2012-09-05 12:36:52 +0530
+Processing by MicropostsController#new as HTML
+  Rendered microposts/_form.html.erb (8.5ms)
+  Rendered microposts/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 41ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:36:52 +0530
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:36:52 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:36:52 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:36:52 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:36:52 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2012-09-05 12:36:52 +0530
+Served asset /microposts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2012-09-05 12:36:52 +0530
+Served asset /microposts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:36:52 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:36:52 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAfjnJQ613jYIcJWcTQuDQ57CQVpVz8C+NWGAAqnem0=", "micropost"=>{"content"=>"published material licensed to authorize copying and modification by anyone", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "microposts" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "published material licensed to authorize copying and modification by anyone"], ["created_at", Wed, 05 Sep 2012 07:08:09 UTC +00:00], ["updated_at", Wed, 05 Sep 2012 07:08:09 UTC +00:00], ["user_id", 1]]
+  [1m[35m (208.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/microposts/1
+Completed 302 Found in 220ms (ActiveRecord: 210.3ms)
+
+
+Started GET "/microposts/1" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.5ms)[0m  [1mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered microposts/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Served asset /microposts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Served asset /microposts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Served asset /users.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:09 +0530
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/microposts" for 127.0.0.1 at 2012-09-05 12:38:11 +0530
+Processing by MicropostsController#index as HTML
+  [1m[35mMicropost Load (0.4ms)[0m  SELECT "microposts".* FROM "microposts" 
+  Rendered microposts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:12 +0530
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:12 +0530
+Served asset /microposts.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:12 +0530
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:12 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:12 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:12 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:12 +0530
+Served asset /microposts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:12 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:12 +0530
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/microposts/new" for 127.0.0.1 at 2012-09-05 12:38:13 +0530
+Processing by MicropostsController#new as HTML
+  Rendered microposts/_form.html.erb (4.7ms)
+  Rendered microposts/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:13 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:13 +0530
+Served asset /microposts.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:13 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:13 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:13 +0530
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:13 +0530
+Served asset /microposts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:13 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:13 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:13 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at 2012-09-05 12:38:22 +0530
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAfjnJQ613jYIcJWcTQuDQ57CQVpVz8C+NWGAAqnem0=", "micropost"=>{"content"=>"published material licensed to authorize copying and modification by anyonepublished material licensed to authorize copying and modification by anyonepublished material licensed to authorize copying and modification by anyonepublished material licensed to authorize copying and modification by anyonepublished material licensed to authorize copying and modification by anyonepublished material licensed to authorize copying and modification by anyone", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered microposts/_form.html.erb (7.1ms)
+  Rendered microposts/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 87ms (Views: 82.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:22 +0530
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:22 +0530
+Served asset /microposts.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:22 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:22 +0530
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:22 +0530
+Served asset /microposts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:22 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:22 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:22 +0530
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:22 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at 2012-09-05 12:38:31 +0530
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAfjnJQ613jYIcJWcTQuDQ57CQVpVz8C+NWGAAqnem0=", "micropost"=>{"content"=>"published material licensed to authorize copying and modification by anyonepublished material licensed to authorize copying and modification by anyone", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered microposts/_form.html.erb (6.7ms)
+  Rendered microposts/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:31 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:31 +0530
+Served asset /microposts.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:31 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:31 +0530
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:31 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:31 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:31 +0530
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:31 +0530
+Served asset /microposts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:31 +0530
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at 2012-09-05 12:38:38 +0530
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAfjnJQ613jYIcJWcTQuDQ57CQVpVz8C+NWGAAqnem0=", "micropost"=>{"content"=>"published material licensed to authorize copying and modification by anyone", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "microposts" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "published material licensed to authorize copying and modification by anyone"], ["created_at", Wed, 05 Sep 2012 07:08:38 UTC +00:00], ["updated_at", Wed, 05 Sep 2012 07:08:38 UTC +00:00], ["user_id", 1]]
+  [1m[36m (227.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/microposts/2
+Completed 302 Found in 233ms (ActiveRecord: 228.3ms)
+
+
+Started GET "/microposts/2" for 127.0.0.1 at 2012-09-05 12:38:38 +0530
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMicropost Load (0.2ms)[0m  SELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered microposts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:38 +0530
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:38 +0530
+Served asset /microposts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:38 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:38 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:38 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:38 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:39 +0530
+Served asset /microposts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:39 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:39 +0530
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/microposts" for 127.0.0.1 at 2012-09-05 12:38:40 +0530
+Processing by MicropostsController#index as HTML
+  [1m[36mMicropost Load (0.3ms)[0m  [1mSELECT "microposts".* FROM "microposts" [0m
+  Rendered microposts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:40 +0530
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/microposts.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:40 +0530
+Served asset /microposts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:40 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:40 +0530
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-05 12:38:40 +0530
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:40 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/microposts.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:40 +0530
+Served asset /microposts.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:40 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-05 12:38:40 +0530
+Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
